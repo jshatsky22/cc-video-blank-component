@@ -1,0 +1,53 @@
+apiPb:
+  blocks:
+    - name: FetchShippingHistory
+      step:
+        integration: 10ad1fa6-2ee6-43a0-a4ce-635b51760c45
+        redshift:
+          body: |-
+            -- You can use SQL to query data (ex. SELECT * FROM orders;)
+            select *
+            from shipping_history
+          filterBy: []
+          mappedColumns: []
+          mappingMode: ""
+          newValues: []
+          oldValues: []
+          table: ""
+          useAdvancedMatching: ""
+          usePreparedSql: true
+  metadata:
+    description: ""
+    folder: ""
+    id: 9b154b5f-c41a-4d25-a294-316cbdd61482
+    name: FetchShippingHistory
+    organization: 71b53980-0a9d-45dc-a4e8-5efd62ebfb1f
+    tags: {}
+    timestamps: {}
+    version: ""
+  trigger:
+    application:
+      id: 247352eb-8446-43a6-af93-65469fe9505c
+      options: {}
+applicationId: 247352eb-8446-43a6-af93-65469fe9505c
+creator: {}
+folderId: ""
+id: 9b154b5f-c41a-4d25-a294-316cbdd61482
+isDeployed: false
+name: FetchShippingHistory
+organizationId: 71b53980-0a9d-45dc-a4e8-5efd62ebfb1f
+sendEmailOnFailure: null
+settings:
+  profiles:
+    deployed:
+      availableProfileIds:
+        - 431d2084-be9f-46c4-b44e-8632bb72084d
+        - bedc7639-78d3-4b13-ad79-5fc86dfc94d5
+      defaultProfileId: 431d2084-be9f-46c4-b44e-8632bb72084d
+    editor:
+      availableProfileIds:
+        - 431d2084-be9f-46c4-b44e-8632bb72084d
+        - bedc7639-78d3-4b13-ad79-5fc86dfc94d5
+      defaultProfileId: bedc7639-78d3-4b13-ad79-5fc86dfc94d5
+triggerType: 0
+updated: 1689559176234

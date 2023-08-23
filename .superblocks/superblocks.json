@@ -1,0 +1,9 @@
+{
+  "apis": {
+    "4f7c2162-fdaf-416b-9601-602ce9db0e73": "exportrowdata",
+    "9b154b5f-c41a-4d25-a294-316cbdd61482": "fetchshippinghistory"
+  },
+  "configType": "APPLICATION",
+  "defaultPageId": "18a2c3f3-9d7f-4889-a69b-458fa77cb161",
+  "id": "247352eb-8446-43a6-af93-65469fe9505c"
+}

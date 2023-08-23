@@ -1,0 +1,40 @@
+created: 2023-07-06T19:07:49.240Z
+creator:
+  id: b7f6076a-3da9-4836-b31f-4c3bdfa6ec33
+  name: Jesse Shatsky
+deletedAt: null
+deployedAt: null
+deployedCommitId: null
+folderId: null
+id: 247352eb-8446-43a6-af93-65469fe9505c
+isDeployed: false
+isEditable: true
+isPublic: false
+name: Jesse's Wonderful App
+organizationId: 71b53980-0a9d-45dc-a4e8-5efd62ebfb1f
+pages:
+  - id: 18a2c3f3-9d7f-4889-a69b-458fa77cb161
+    isDefault: true
+settings:
+  profiles:
+    deployed:
+      availableProfileIds:
+        - 431d2084-be9f-46c4-b44e-8632bb72084d
+        - bedc7639-78d3-4b13-ad79-5fc86dfc94d5
+      defaultProfileId: 431d2084-be9f-46c4-b44e-8632bb72084d
+    editor:
+      availableProfileIds:
+        - 431d2084-be9f-46c4-b44e-8632bb72084d
+        - bedc7639-78d3-4b13-ad79-5fc86dfc94d5
+      defaultProfileId: bedc7639-78d3-4b13-ad79-5fc86dfc94d5
+    preview:
+      availableProfileIds:
+        - 431d2084-be9f-46c4-b44e-8632bb72084d
+        - bedc7639-78d3-4b13-ad79-5fc86dfc94d5
+      defaultProfileId: bedc7639-78d3-4b13-ad79-5fc86dfc94d5
+updated: 2023-07-06T19:23:10.857Z
+userPermissions:
+  - manage:applications
+  - read:applications
+  - publish:applications
+  - makePublic:applications

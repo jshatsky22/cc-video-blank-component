@@ -1,0 +1,288 @@
+applicationId: 247352eb-8446-43a6-af93-65469fe9505c
+id: 18a2c3f3-9d7f-4889-a69b-458fa77cb161
+isHidden: false
+layouts:
+  - actionUpdates: []
+    dsl:
+      apis:
+        apiMap:
+          4f7c2162-fdaf-416b-9601-602ce9db0e73:
+            dynamicBindingPathList: []
+            dynamicTriggerPathList:
+              - key: onError
+              - key: onSuccess
+            id: 4f7c2162-fdaf-416b-9601-602ce9db0e73
+            onError:
+              - id: 480069d5-8e09-4a79-a5d6-e39caa2945ae
+                message: "{{ExportRowData.error}}"
+                style: error
+                type: showAlert
+            onSuccess:
+              - id: wpk9xt7hbq
+                message: Just exported {{Step1.output}}
+                newWindow: true
+                type: showAlert
+          9b154b5f-c41a-4d25-a294-316cbdd61482:
+            dynamicTriggerPathList:
+              - key: onError
+            id: 9b154b5f-c41a-4d25-a294-316cbdd61482
+            onError:
+              - id: 7e480d15-8ee7-4ad2-8c7b-e1d947925910
+                message: "{{FetchShippingHistory.error}}"
+                style: error
+                type: showAlert
+      backgroundColor: none
+      bottomRow: 107
+      cachedData:
+        apiDeps: {}
+        apiNames: []
+        pageLoadActions:
+          apiDeps:
+            FetchShippingHistory: []
+          apiNames:
+            - FetchShippingHistory
+      canExtend: true
+      children:
+        - animateLoading: true
+          bottomRow: 36
+          columnOrder:
+            - activity
+            - id
+            - location
+            - order_id
+            - timestamp
+            - customColumn1
+          compactMode: SHORT
+          defaultFilters: "{}"
+          defaultSelectedRow: "0"
+          derivedColumns:
+            customColumn1:
+              buttonLabel: "{{ShippingTable.tableDataWithInserts.map((currentRow) => { return
+                'Export Row'})}}"
+              columnType: button
+              computedValue: ""
+              enableFilter: true
+              enableSort: true
+              horizontalAlignment: LEFT
+              id: customColumn1
+              index: 5
+              isDerived: true
+              isEditableOnInsertion: true
+              isVisible: true
+              label: ExportRow
+              linkLabel: ""
+              linkUrl: ""
+              onClick:
+                - id: gpgrecen7i
+                  newWindow: true
+                  type: executeApi
+              openInNewTab: true
+              textSize: PARAGRAPH
+              verticalAlignment: CENTER
+              width: 150
+          dynamicBindingPathList:
+            - key: tableData
+            - key: primaryColumns.activity.computedValue
+            - key: primaryColumns.activity.linkUrl
+            - key: primaryColumns.activity.linkLabel
+            - key: primaryColumns.id.computedValue
+            - key: primaryColumns.id.linkUrl
+            - key: primaryColumns.id.linkLabel
+            - key: primaryColumns.location.computedValue
+            - key: primaryColumns.location.linkUrl
+            - key: primaryColumns.location.linkLabel
+            - key: primaryColumns.order_id.computedValue
+            - key: primaryColumns.order_id.linkUrl
+            - key: primaryColumns.order_id.linkLabel
+            - key: primaryColumns.timestamp.computedValue
+            - key: primaryColumns.timestamp.linkUrl
+            - key: primaryColumns.timestamp.linkLabel
+            - key: derivedColumns.customColumn1.buttonLabel
+            - key: primaryColumns.customColumn1.buttonLabel
+          dynamicTriggerPathList:
+            - key: onRowClicked
+            - key: onSaveChanges
+            - key: onCancelChanges
+            - key: primaryColumns.customColumn1.onClick
+          horizontalAlignment: LEFT
+          isDownloadable: true
+          isFilterable: true
+          isLoading: false
+          isSearchable: true
+          isVisible: true
+          label: Data
+          leftColumn: 9
+          onCancelChanges:
+            - id: o2awqhscbk
+              newWindow: true
+          onRowClicked:
+            - id: s8qo2h0ntm
+              newWindow: true
+          onSaveChanges:
+            - id: x6wkjzueuv
+              newWindow: true
+          pageType: NONE
+          parentId: "0"
+          primaryColumns:
+            activity:
+              columnType: text
+              computedValue: "{{ShippingTable.tableDataWithInserts.map((currentRow) => {
+                return currentRow.activity })}}"
+              enableFilter: true
+              enableSort: true
+              horizontalAlignment: LEFT
+              id: activity
+              index: 0
+              isDerived: false
+              isEditableOnInsertion: true
+              isVisible: true
+              label: activity
+              linkLabel: "{{ShippingTable.tableDataWithInserts.map((currentRow) => { return
+                currentRow.activity })}}"
+              linkUrl: "{{ShippingTable.tableDataWithInserts.map((currentRow) => { return
+                currentRow.activity })}}"
+              openInNewTab: true
+              textSize: PARAGRAPH
+              verticalAlignment: CENTER
+              width: 150
+            customColumn1:
+              buttonLabel: "{{ShippingTable.tableDataWithInserts.map((currentRow) => { return
+                'Export Row'})}}"
+              columnType: button
+              computedValue: ""
+              enableFilter: true
+              enableSort: true
+              horizontalAlignment: LEFT
+              id: customColumn1
+              index: 5
+              isDerived: true
+              isEditableOnInsertion: true
+              isVisible: true
+              label: ExportRow
+              linkLabel: ""
+              linkUrl: ""
+              onClick:
+                - apiNames:
+                    - ExportRowData
+                  id: gpgrecen7i
+                  newWindow: true
+                  type: executeApi
+              openInNewTab: true
+              textSize: PARAGRAPH
+              verticalAlignment: CENTER
+              width: 150
+            id:
+              columnType: text
+              computedValue: "{{ShippingTable.tableDataWithInserts.map((currentRow) => {
+                return currentRow.id })}}"
+              enableFilter: true
+              enableSort: true
+              horizontalAlignment: LEFT
+              id: id
+              index: 1
+              isDerived: false
+              isEditableOnInsertion: true
+              isVisible: true
+              label: id
+              linkLabel: "{{ShippingTable.tableDataWithInserts.map((currentRow) => { return
+                currentRow.id })}}"
+              linkUrl: "{{ShippingTable.tableDataWithInserts.map((currentRow) => { return
+                currentRow.id })}}"
+              openInNewTab: true
+              textSize: PARAGRAPH
+              verticalAlignment: CENTER
+              width: 150
+            location:
+              columnType: text
+              computedValue: "{{ShippingTable.tableDataWithInserts.map((currentRow) => {
+                return currentRow.location })}}"
+              enableFilter: true
+              enableSort: true
+              horizontalAlignment: LEFT
+              id: location
+              index: 2
+              isDerived: false
+              isEditableOnInsertion: true
+              isVisible: true
+              label: location
+              linkLabel: "{{ShippingTable.tableDataWithInserts.map((currentRow) => { return
+                currentRow.location })}}"
+              linkUrl: "{{ShippingTable.tableDataWithInserts.map((currentRow) => { return
+                currentRow.location })}}"
+              openInNewTab: true
+              textSize: PARAGRAPH
+              verticalAlignment: CENTER
+              width: 150
+            order_id:
+              columnType: text
+              computedValue: "{{ShippingTable.tableDataWithInserts.map((currentRow) => {
+                return currentRow.order_id })}}"
+              enableFilter: true
+              enableSort: true
+              horizontalAlignment: LEFT
+              id: order_id
+              index: 3
+              isDerived: false
+              isEditableOnInsertion: true
+              isVisible: true
+              label: order_id
+              linkLabel: "{{ShippingTable.tableDataWithInserts.map((currentRow) => { return
+                currentRow.order_id })}}"
+              linkUrl: "{{ShippingTable.tableDataWithInserts.map((currentRow) => { return
+                currentRow.order_id })}}"
+              openInNewTab: true
+              textSize: PARAGRAPH
+              verticalAlignment: CENTER
+              width: 150
+            timestamp:
+              columnType: text
+              computedValue: "{{ShippingTable.tableDataWithInserts.map((currentRow) => {
+                return currentRow.timestamp })}}"
+              enableFilter: true
+              enableSort: true
+              horizontalAlignment: LEFT
+              id: timestamp
+              index: 4
+              isDerived: false
+              isEditableOnInsertion: true
+              isVisible: true
+              label: timestamp
+              linkLabel: "{{ShippingTable.tableDataWithInserts.map((currentRow) => { return
+                currentRow.timestamp })}}"
+              linkUrl: "{{ShippingTable.tableDataWithInserts.map((currentRow) => { return
+                currentRow.timestamp })}}"
+              openInNewTab: true
+              textSize: PARAGRAPH
+              verticalAlignment: CENTER
+              width: 150
+          rightColumn: 75
+          snapColumns: 66
+          tableData: "{{FetchShippingHistory.response}}"
+          tableHeader: Users
+          textSize: PARAGRAPH
+          topRow: 6
+          type: TABLE_WIDGET
+          verticalAlignment: CENTER
+          widgetId: 0nnwq7xqrk
+          widgetLastChange: 2023-07-06T19:15:54.393Z
+          widgetName: ShippingTable
+      containerStyle: none
+      detachFromLayout: true
+      dynamicBindingPathList: []
+      dynamicTriggerPathList: []
+      minHeight: 1292
+      snapColumns: 96
+      snapRows: 99
+      topRow: 0
+      type: CANVAS_WIDGET
+      version: 6
+      widgetId: "0"
+      widgetLastChange: 2023-07-06T19:23:10.637Z
+      widgetName: MainContainer
+    id: fcaf89ba-c8cd-4c61-8575-b79de182c3e5
+    layoutOnLoadActions: []
+    messages: []
+    updated: 2023-07-06T19:23:10.857Z
+    userPermissions: []
+name: Page1
+updated: 2023-07-06T19:23:10.857Z

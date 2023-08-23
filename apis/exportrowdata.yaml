@@ -1,0 +1,72 @@
+apiPb:
+  blocks:
+    - name: Step1
+      step:
+        integration: javascript
+        javascript:
+          body: |
+            const rowToExport = ShippingTable.selectedRow;
+
+            return rowToExport; 
+    - name: Step2
+      step:
+        integration: python
+        python:
+          body: >-
+            # Use Python to:
+
+            #
+
+            # 1. Transform the output of previous Steps by referencing their output (ex. Step1.output)
+
+            # 2. Write logic referencing UI components (ex. Table1.selectedRow.id)
+
+            # 3. Make http calls using requests (import requests)
+
+            #
+
+            # More libraries are coming in the future. Superblocks uses Python 3.
+
+
+            temp = Step1.output
+
+            print(temp)
+
+            temp['activity'] = temp['activity'].lower()
+
+            return temp
+  metadata:
+    description: ""
+    folder: ""
+    id: 4f7c2162-fdaf-416b-9601-602ce9db0e73
+    name: ExportRowData
+    organization: 71b53980-0a9d-45dc-a4e8-5efd62ebfb1f
+    tags: {}
+    timestamps: {}
+    version: ""
+  trigger:
+    application:
+      id: 247352eb-8446-43a6-af93-65469fe9505c
+      options: {}
+applicationId: 247352eb-8446-43a6-af93-65469fe9505c
+creator: {}
+folderId: ""
+id: 4f7c2162-fdaf-416b-9601-602ce9db0e73
+isDeployed: false
+name: ExportRowData
+organizationId: 71b53980-0a9d-45dc-a4e8-5efd62ebfb1f
+sendEmailOnFailure: null
+settings:
+  profiles:
+    deployed:
+      availableProfileIds:
+        - 431d2084-be9f-46c4-b44e-8632bb72084d
+        - bedc7639-78d3-4b13-ad79-5fc86dfc94d5
+      defaultProfileId: 431d2084-be9f-46c4-b44e-8632bb72084d
+    editor:
+      availableProfileIds:
+        - 431d2084-be9f-46c4-b44e-8632bb72084d
+        - bedc7639-78d3-4b13-ad79-5fc86dfc94d5
+      defaultProfileId: bedc7639-78d3-4b13-ad79-5fc86dfc94d5
+triggerType: 0
+updated: 1689558902753
